@@ -1,0 +1,85 @@
+{
+  "name": "India",
+  "states": [
+    {
+      "name": "Maharashtra",
+      "cities": ["Mumbai", "Pune", "Nagpur", "Nashik", "Thane", "Aurangabad"]
+    },
+    {
+      "name": "Karnataka",
+      "cities": ["Bengaluru", "Mysore", "Mangalore", "Hubli", "Belgaum"]
+    },
+    {
+      "name": "Delhi",
+      "cities": ["New Delhi", "Dwarka", "Rohini", "Saket"]
+    },
+    {
+      "name": "Tamil Nadu",
+      "cities": ["Chennai", "Coimbatore", "Madurai", "Tiruchirappalli"]
+    },
+    {
+      "name": "Uttar Pradesh",
+      "cities": ["Lucknow", "Kanpur", "Varanasi", "Agra", "Noida", "Ghaziabad"]
+    },
+    {
+      "name": "West Bengal",
+      "cities": ["Kolkata", "Asansol", "Durgapur", "Siliguri"]
+    },
+    {
+      "name": "Gujarat",
+      "cities": ["Ahmedabad", "Surat", "Vadodara", "Rajkot", "Gandhinagar"]
+    },
+    {
+      "name": "Rajasthan",
+      "cities": ["Jaipur", "Jodhpur", "Udaipur", "Ajmer", "Bikaner"]
+    },
+    {
+      "name": "Bihar",
+      "cities": ["Patna", "Gaya", "Muzaffarpur", "Bhagalpur"]
+    },
+    {
+      "name": "Punjab",
+      "cities": ["Ludhiana", "Amritsar", "Jalandhar", "Patiala"]
+    },
+    {
+      "name": "Madhya Pradesh",
+      "cities": ["Bhopal", "Indore", "Jabalpur", "Gwalior"]
+    },
+    {
+      "name": "Andhra Pradesh",
+      "cities": ["Visakhapatnam", "Vijayawada", "Guntur", "Nellore"]
+    },
+    {
+      "name": "Telangana",
+      "cities": ["Hyderabad", "Warangal", "Nizamabad", "Karimnagar"]
+    },
+    {
+      "name": "Kerala",
+      "cities": ["Thiruvananthapuram", "Kochi", "Kozhikode", "Thrissur"]
+    },
+    {
+      "name": "Haryana",
+      "cities": ["Gurgaon", "Faridabad", "Panipat", "Ambala"]
+    },
+    {
+      "name": "Jharkhand",
+      "cities": ["Ranchi", "Jamshedpur", "Dhanbad", "Bokaro"]
+    },
+    {
+      "name": "Chhattisgarh",
+      "cities": ["Raipur", "Bhilai", "Bilaspur", "Korba"]
+    },
+    {
+      "name": "Assam",
+      "cities": ["Guwahati", "Silchar", "Dibrugarh", "Jorhat"]
+    },
+    {
+      "name": "Odisha",
+      "cities": ["Bhubaneswar", "Cuttack", "Rourkela", "Puri"]
+    },
+    {
+      "name": "Goa",
+      "cities": ["Panaji", "Margao", "Vasco da Gama", "Mapusa"]
+    }
+  ]
+}
