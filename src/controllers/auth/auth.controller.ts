@@ -71,7 +71,7 @@ export const register = (role: IUserRole) =>
 
     const response = new AppResponse(
       201,
-      { email: user.email },
+      { user: { email: user.email } },
       'User created successfully',
     );
     return res.status(201).json(response);

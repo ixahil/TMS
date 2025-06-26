@@ -1,6 +1,4 @@
 import { Request, Response } from 'express';
-import { UploadedFile } from 'express-fileupload';
-import { uploadImages } from '../../lib/imagekit';
 import { asyncHandler } from '../../middlewares/async.handler';
 import { Tour } from '../../models/tour.model';
 import {
@@ -9,6 +7,24 @@ import {
 } from '../../services/tour.services';
 import { AppError } from '../../utils/global/app.error';
 import AppResponse from '../../utils/global/app.response';
+
+const topDestinations = asyncHandler(async (req: Request, res: Response) => {
+  const filters = buildTourQuery({
+    search: req.query.search as string,
+    country: (req.query.country as string)?.split(',') || [],
+    state: ['Kerala', 'Punjab', 'Himachal'],
+    status: 'ACTIVE',
+  });
+
+  const data = await getPaginatedTours({
+    query: filters,
+    page: parseInt(req.query.page as string) || 1,
+    limit: parseInt(req.query.limit as string) || 10,
+    sortOrder: (req.query.order as 'asc' | 'desc') || 'desc',
+  });
+
+  res.status(200).json(new AppResponse(200, data, 'Success'));
+});
 
 const getAllToursByAgent = asyncHandler(async (req: Request, res: Response) => {
   const filters = buildTourQuery({
@@ -33,6 +49,7 @@ const getAllTours = asyncHandler(async (req: Request, res: Response) => {
     search: req.query.search as string,
     country: (req.query.country as string)?.split(',') || [],
     state: (req.query.state as string)?.split(',') || [],
+    status: 'ACTIVE',
   });
 
   const data = await getPaginatedTours({
@@ -290,6 +307,7 @@ const tours = {
   deleteTour,
   getAllToursByAgent,
   updateTourStatus,
+  topDestinations,
 };
 
 export default tours;

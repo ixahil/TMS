@@ -13,6 +13,7 @@ import { agentTourRouter } from './routes/agent.tour.routes';
 import { adminTourRouter } from './routes/admin.tour.routes';
 import { adminMediaRouter } from './routes/admin.media.routes';
 import { agentMediaRouter } from './routes/agent.media.routes';
+import { bookingRouter } from './routes/bookings.routes';
 
 const app: Express = express();
 
@@ -41,6 +42,7 @@ app.use('/api/v1/agents/tours', agentTourRouter);
 app.use('/api/v1/admin/tours', adminTourRouter);
 app.use('/api/v1/admin/media', adminMediaRouter);
 app.use('/api/v1/agents/media', agentMediaRouter);
+app.use('/api/v1/bookings', bookingRouter);
 
 app.use('/*path', (req: Request, res: Response, next: NextFunction) => {
   next(new AppError(404, `404 ${req.originalUrl} Cannot find on this server!`));

@@ -11,53 +11,56 @@ const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export type IUserRole = 'ADMIN' | 'USER' | 'AGENT';
 
-const UserSchema = new Schema({
-  name: {
-    type: String,
-    required: true,
-  },
-  slug: {
-    type: String,
-    unique: true,
-  },
-  phone: String,
-  email: {
-    type: String,
-    required: true,
-    unique: true,
-    lowercase: true,
-    trim: true,
-    validate: {
-      validator: function (value) {
-        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+const UserSchema = new Schema(
+  {
+    name: {
+      type: String,
+      required: true,
+    },
+    slug: {
+      type: String,
+      unique: true,
+    },
+    phone: String,
+    email: {
+      type: String,
+      required: true,
+      unique: true,
+      lowercase: true,
+      trim: true,
+      validate: {
+        validator: function (value) {
+          return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+        },
+        message: (props) => `${props.value} is not a valid email!`,
       },
-      message: (props) => `${props.value} is not a valid email!`,
+    },
+    password: {
+      type: String,
+      required: true,
+    },
+    role: {
+      type: String,
+      required: true,
+      default: 'USER',
+      enum: ['USER', 'ADMIN', 'AGENT'],
+    },
+    isEmailVerified: {
+      type: Boolean,
+      default: false,
+    },
+    profile: {
+      type: String,
+    },
+    status: {
+      type: String,
+      required: true,
+      default: 'ACTIVE',
+      enum: ['ACTIVE', 'SUSPENDED', 'UNDER_REVIEW'],
     },
   },
-  password: {
-    type: String,
-    required: true,
-  },
-  role: {
-    type: String,
-    required: true,
-    default: 'USER',
-    enum: ['USER', 'ADMIN', 'AGENT'],
-  },
-  isEmailVerified: {
-    type: Boolean,
-    default: false,
-  },
-  profile: {
-    type: String,
-  },
-  status: {
-    type: String,
-    required: true,
-    default: 'ACTIVE',
-    enum: ['ACTIVE', 'SUSPENDED', 'UNDER_REVIEW'],
-  },
-});
+  { timestamps: true },
+);
 
 UserSchema.pre('save', function (next) {
   try {

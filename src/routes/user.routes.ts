@@ -25,6 +25,12 @@ router.post(
 );
 
 router.get(
+  '/me',
+  authenticate(['ADMIN', 'USER', 'AGENT']),
+  userController.getMe,
+);
+
+router.get(
   '/:id',
   authenticate(['ADMIN', 'USER', 'AGENT']),
   userController.getActiveUser,

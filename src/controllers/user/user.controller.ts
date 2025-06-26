@@ -4,6 +4,13 @@ import { User } from '../../models/user.model';
 import { AppError } from '../../utils/global/app.error';
 import AppResponse from '../../utils/global/app.response';
 
+const getMe = asyncHandler(async (req: Request, res: Response) => {
+  if (!req.user.id) {
+    throw new AppError(401, 'please login first');
+  }
+  return res.status(200).json(new AppResponse(200, req.user));
+});
+
 const getActiveUser = asyncHandler(async (req: Request, res: Response) => {
   const user = await User.findById(req.params.id);
   if (!user || user.id !== req.user.id) {
@@ -18,7 +25,7 @@ const getAgents = asyncHandler(async (req: Request, res: Response) => {
 
 const getUsers = asyncHandler(async (req: Request, res: Response) => {
   const agents = await User.find({ role: 'USER' }).select('-password');
-  return res.status(200).json(new AppResponse(200, agents));
+  return res.status(200).json(new AppResponse(200, { users: agents }));
 });
 const updateProfile = asyncHandler(async (req: Request, res: Response) => {
   const { name, phone, profile } = req.body;
@@ -66,6 +73,7 @@ const userController = {
   updateUserStatus,
   updateProfile,
   logout,
+  getMe,
 };
 
 export default userController;
