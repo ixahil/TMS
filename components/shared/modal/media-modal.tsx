@@ -1,4 +1,3 @@
-import { ContentLayout } from "@/components/layouts/content-layout";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -14,6 +13,7 @@ import { Modal } from "./modal";
 import { MediaData } from "@/types";
 import { useParams } from "next/navigation";
 import { useUser } from "@/lib/api/useUser";
+import { ContentLayout } from "@/components/layout/dashboard/content-layout";
 
 type MediaModalProps = {
   name: string;

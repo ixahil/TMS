@@ -1,6 +1,6 @@
 "use client";
 
-import { ContentLayout } from "@/components/layouts/content-layout";
+import { ContentLayout } from "@/components/layout/dashboard/content-layout";
 
 // const params = useParams<{ id: string }>();
 

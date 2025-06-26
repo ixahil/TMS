@@ -64,20 +64,20 @@ export const columns: ColumnDef<ITour>[] = [
 
       const handleDelete = async () => {
         const { error, data } = await deleteRoute(
-          `/api/v1/admin/tours/${tour._id}`
+          `/api/v1/agents/tours/${tour._id}`
         );
 
         console.log(data, error);
         if (!error) {
           toast.success("Tour Deleted Successfully!");
-          mutate("/api/v1/admin/tours");
+          mutate("/api/v1/agents/tours");
         } else toast.error("Something Went Wrong!");
       };
 
       return (
         <div>
           <Button size={"icon"} variant={"ghost"} asChild>
-            <Link href={`/tours/${tour._id}`} target="_blank">
+            <Link href={`/tour/${tour._id}`} target="_blank">
               <Eye />
             </Link>
           </Button>

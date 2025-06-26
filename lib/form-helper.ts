@@ -1,5 +1,6 @@
+import { BookingType } from "@/schema/booking";
 import { TourSchemaType } from "@/schema/tour";
-import { ITour } from "@/types";
+import { ITour, IUser } from "@/types";
 
 export function getTourValues(tour?: ITour) {
   const schema: TourSchemaType = {
@@ -19,6 +20,20 @@ export function getTourValues(tour?: ITour) {
     departureDate: tour?.departureDate || "",
     groupSize: tour?.groupSize || "",
     isFeatured: tour?.isFeatured || false,
+  };
+
+  return schema;
+}
+
+export function getBookingValues(user?: IUser) {
+  const schema: BookingType = {
+    email: user?.email || "",
+    emergencyPhone: "",
+    firstName: user?.name || "",
+    lastName: user?.name || "",
+    numberOfTravelers: "1",
+    phone: "",
+    travelDate: "",
   };
 
   return schema;

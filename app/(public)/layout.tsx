@@ -1,9 +1,9 @@
+import { Poppins } from "next/font/google";
 import React, { ReactNode } from "react";
 import "./globals.css";
-import ThemeProvider from "./_components/providers/theme-provider";
-import { Poppins } from "next/font/google";
-import { SiteHeader } from "./_components/header";
-import { SiteFooter } from "./_components/footer";
+import { ThemeProvider } from "@/components/providers/theme-provider";
+import { SiteHeader } from "@/components/layout/public/header";
+import SiteFooter from "@/components/layout/public/footer";
 
 const poppins = Poppins({
   variable: "--font-poppins-sans",

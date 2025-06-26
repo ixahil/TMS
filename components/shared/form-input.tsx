@@ -11,7 +11,7 @@ export type InputType =
   | "email"
   | "date"
   | "time"
-  | "datetime"
+  | "date"
   | "number";
 
 interface Props<T extends FieldValues> {

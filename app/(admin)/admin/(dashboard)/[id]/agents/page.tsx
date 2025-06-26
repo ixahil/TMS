@@ -1,12 +1,12 @@
 "use client";
 
-import { ContentLayout } from "@/components/layouts/content-layout";
 import { DataTable } from "@/components/shared/data-table";
 import { Button } from "@/components/ui/button";
 import { useQuery } from "@/lib/api/use-swr";
 import { exportData } from "@/lib/utils";
 import { UserData } from "@/types";
 import { columns } from "./columns";
+import { ContentLayout } from "@/components/layout/dashboard/content-layout";
 
 const AgentsListPage = () => {
   const { data, error, isLoading } = useQuery<UserData>(

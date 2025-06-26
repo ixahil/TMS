@@ -1,6 +1,5 @@
 "use client";
 
-import { ContentLayout } from "@/components/layouts/content-layout";
 import CommonForm from "@/components/shared/forms/form-component";
 import { TourFormControls } from "@/configs/agents";
 import { post } from "@/lib/api/mutations";
@@ -11,6 +10,7 @@ import { FormProvider, useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import { mutate } from "swr";
 import { getTourValues } from "../../../../../../../lib/form-helper";
+import { ContentLayout } from "@/components/layout/dashboard/content-layout";
 
 const AddTour = () => {
   const router = useRouter();

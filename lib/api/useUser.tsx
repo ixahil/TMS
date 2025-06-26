@@ -36,3 +36,20 @@ export function useUser(id: string) {
     isError: error,
   };
 }
+
+export function useUserWithoutId() {
+  const { data, error, isLoading } = useSWR(
+    `/api/v1/users/me`,
+    () => fetcher<IUser>(`/api/v1/users/me`),
+    {
+      revalidateIfStale: false,
+      revalidateOnFocus: false,
+    }
+  );
+
+  return {
+    user: data as IUser,
+    isLoading,
+    isError: error,
+  };
+}

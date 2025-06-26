@@ -1,6 +1,7 @@
 import CommonForm from "@/components/shared/forms/form-component";
 import { TourFormControls } from "@/configs/agents";
 import { post } from "@/lib/api/mutations";
+import { getTourValues } from "@/lib/form-helper";
 import { TourSchema, TourSchemaType } from "@/schema/tour";
 import { ITour } from "@/types";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -8,7 +9,6 @@ import { useRouter } from "next/navigation";
 import { FormProvider, useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import { mutate } from "swr";
-import { getTourValues } from "../../../../../../../lib/form-helper";
 
 const EditTour = ({ tour }: { tour: ITour }) => {
   const router = useRouter();

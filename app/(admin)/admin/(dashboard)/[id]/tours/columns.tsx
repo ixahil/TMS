@@ -127,7 +127,7 @@ export const columns: ColumnDef<ITour>[] = [
       return (
         <div>
           <Button size={"icon"} variant={"ghost"} asChild>
-            <Link href={`/tours/${tour._id}`} target="_blank">
+            <Link href={`/tour/${tour._id}`} target="_blank">
               <Eye />
             </Link>
           </Button>

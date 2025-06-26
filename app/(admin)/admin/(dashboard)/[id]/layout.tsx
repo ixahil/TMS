@@ -6,10 +6,10 @@ import { useParams, useRouter } from "next/navigation";
 import { ReactNode, Suspense, useEffect, useState } from "react";
 import { SidebarProvider } from "@/components/ui/sidebar";
 import { ThemeProvider } from "@/components/providers/theme-provider";
-import { AppSidebar } from "@/components/layouts/sidebar";
-import { Header } from "@/components/layouts/header";
-import { Footer } from "@/components/layouts/footer";
 import { adminMenu } from "@/configs/admin";
+import { AppSidebar } from "@/components/layout/dashboard/sidebar";
+import { Header } from "@/components/layout/dashboard/header";
+import { Footer } from "@/components/layout/dashboard/footer";
 
 const DashboardLayout = ({ children }: { children: ReactNode }) => {
   const params = useParams<{ id: string }>();

@@ -1,6 +1,5 @@
 "use client";
 
-import { ContentLayout } from "@/components/layouts/content-layout";
 import { DataTable } from "@/components/shared/data-table";
 import TablePagination from "@/components/shared/data-table/table-pagination";
 import Filters from "@/components/shared/filters";
@@ -12,6 +11,7 @@ import { useEffect } from "react";
 import { columns } from "./columns";
 import { exportData } from "@/lib/utils";
 import { TourWithPagination } from "@/types";
+import { ContentLayout } from "@/components/layout/dashboard/content-layout";
 
 const Tours = () => {
   const searchParams = useSearchParams();

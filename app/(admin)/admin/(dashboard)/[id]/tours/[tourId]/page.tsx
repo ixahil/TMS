@@ -1,10 +1,10 @@
 "use client";
 
-import { ContentLayout } from "@/components/layouts/content-layout";
 import { useQuery } from "@/lib/api/use-swr";
 import { useParams } from "next/navigation";
 import EditTour from "./edit-tour";
 import { TourData } from "@/types";
+import { ContentLayout } from "@/components/layout/dashboard/content-layout";
 
 const EditTourPage = () => {
   const params = useParams<{ tourId: string }>();

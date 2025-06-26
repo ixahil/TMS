@@ -5,7 +5,6 @@ import { useParams } from "next/navigation";
 import { FormProvider, useForm } from "react-hook-form";
 import { z } from "zod";
 
-import { ContentLayout } from "@/components/layouts/content-layout";
 import FormField from "@/components/shared/form-input";
 import ProfileImageUploader from "@/components/shared/image-uploaders/profile-image-uploader";
 import { SubmitButton } from "@/components/shared/submit-button";
@@ -13,6 +12,7 @@ import { post } from "@/lib/api/mutations";
 import { useUser } from "@/lib/api/useUser";
 import toast from "react-hot-toast";
 import { mutate } from "swr";
+import { ContentLayout } from "@/components/layout/dashboard/content-layout";
 
 const EditAccountSchema = z.object({
   name: z.string().min(1, "Name is required"),

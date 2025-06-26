@@ -1,5 +1,26 @@
 import { LucideIcon } from "lucide-react";
 
+export type BookingData = {
+  bookings: IBooking[];
+};
+
+export interface IBooking {
+  _id: string;
+  tour: ITour;
+  user: IUser;
+  email: string;
+  phone: string;
+  numberOfTravelers: string;
+  emergencyPhone: string;
+  totalAmount: number;
+  status: "CONFIRMED" | "PENDING" | "CANCELLED" | "COMPLETED";
+  paymentStatus: "PAID" | "PENDING" | "FAILED";
+  createdAt: Date;
+  updatedAt: Date;
+  bookingDate: Date;
+  travelDate: Date;
+}
+
 export interface IUser {
   _id: string;
   name: string;
@@ -11,6 +32,8 @@ export interface IUser {
   phone?: string | null | undefined;
   slug?: string | null | undefined;
   profile?: string | null | undefined;
+  createdAt: Date;
+  updatedAt: Date;
 }
 
 export interface IMedia {
@@ -35,7 +58,7 @@ export interface ITour {
   city: string;
   state: string;
   country: string;
-  itinerary: itinerary[];
+  itinerary: Itinerary[];
   tags: string[];
   duration?: string;
   departureDate?: string;
@@ -48,9 +71,10 @@ export interface ITour {
   updatedAt: Date;
 }
 
-export interface itinerary {
+export interface Itinerary {
   label: string;
   description: string;
+  _id: string;
 }
 
 export interface IMenuItem {
@@ -76,6 +100,10 @@ export type UserData = {
 };
 export type TourData = {
   tour: ITour;
+};
+
+export type ToursData = {
+  tours: ITour[];
 };
 
 export type TourWithPagination = {

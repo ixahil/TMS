@@ -21,17 +21,14 @@ export const siteConfig = {
             {
               label: "Chandigarh",
               url: "/tours?state=chandigarh",
-              children: [],
             },
             {
               label: "Delhi",
               url: "/tours?state=delhi",
-              children: [],
             },
             {
               label: "Haryana",
               url: "/tours?state=haryana",
-              children: [],
             },
           ],
         },
@@ -42,17 +39,14 @@ export const siteConfig = {
             {
               label: "Arunachal Pradesh",
               url: "/tours?state=ap",
-              children: [],
             },
             {
               label: "Assam",
               url: "/tours?state=assam",
-              children: [],
             },
             {
               label: "Manipur",
               url: "/tours?state=manipur",
-              children: [],
             },
           ],
         },
@@ -63,17 +57,14 @@ export const siteConfig = {
             {
               label: "Andaman Nicobar Islands",
               url: "/tours?state=andaman",
-              children: [],
             },
             {
               label: "Bihar",
               url: "/tours?state=bihar",
-              children: [],
             },
             {
               label: "Jharkhand",
               url: "/tours?state=jharkhand",
-              children: [],
             },
           ],
         },
@@ -84,12 +75,10 @@ export const siteConfig = {
             {
               label: "Chattisgarh",
               url: "/tours?state=chattisgarh",
-              children: [],
             },
             {
               label: "Madhya Pradesh",
               url: "/tours?state=mp",
-              children: [],
             },
           ],
         },
@@ -100,22 +89,18 @@ export const siteConfig = {
             {
               label: "Dadra and Nagar Haveli",
               url: "/tours?state=dadra",
-              children: [],
             },
             {
               label: "Goa",
               url: "/tours?state=goa",
-              children: [],
             },
             {
               label: "Gujarat",
               url: "/tours?state=gujarat",
-              children: [],
             },
             {
               label: "Maharashtra",
               url: "/tours?state=maharashtra",
-              children: [],
             },
           ],
         },
@@ -126,22 +111,18 @@ export const siteConfig = {
             {
               label: "Andhra Pradesh",
               url: "/tours?state=andhra",
-              children: [],
             },
             {
               label: "Karnataka",
               url: "/tours?state=karnataka",
-              children: [],
             },
             {
               label: "Kerala",
               url: "/tours?state=kerala",
-              children: [],
             },
             {
               label: "Lakshadweep",
               url: "/tours?state=lakshadweep",
-              children: [],
             },
           ],
         },
@@ -150,27 +131,22 @@ export const siteConfig = {
     {
       label: "Holiday Ideas",
       url: "/holiday-ideas",
-      children: [],
     },
     {
       label: "Packages",
       url: "/packages",
-      children: [],
     },
     {
       label: "Places to stay",
       url: "/places-to-stay",
-      children: [],
     },
     {
       label: "Weekend Gateways",
       url: "/weekend-gateways",
-      children: [],
     },
     {
       label: "Destination Weddings",
       url: "/weddings",
-      children: [],
     },
   ],
   footerMenu: [
